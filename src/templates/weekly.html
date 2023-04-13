@@ -28,16 +28,16 @@
                         <div class="h-[6rem] flex justify-between content-box">
                             <a href="#{{ ('%02d-%02d-%d' % (date.day, date.month, date.year)) }}">
                                 <p class="font-medium {{ "opacity-50" if date.year != year }}">
-                                    {{ date.day }} {{ calendar.day_name[weekday_num] }}
+                                    {{ calendar.day_name[weekday_num] }} {{ date.day }}
                                 </p>
                             </a>
                         </div>
                     {% endfor -%}
                 </div>
                 <div class="grid gap-y-1">
-                    <div class="h-[6rem] content-box">Weekly main focus</div>
+                    <div class="h-[6rem] content-box">Important cette semaine</div>
                     <div class="h-[18.25rem] content-box">
-                        Weekly priorities
+                        Priorités de la semaine
                         <div class="grid divide-y divide-slate-300 divide-dashed">
                             {% for _ in range(5) -%}
                                 <div class="pl-1 py-3">
